@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  background-color: $hex-body-bg;
+  color: pal-color(white);
+  font-family: $font-family;
+  font-size: font-size(base);
+  line-height: $line-height;
+}
+
+@include heading {
+  margin: 0 0 .5em;
+  color: $heading-color;
+  font-weight: $heading-weight;
+  font-family: $heading-font;
+}
+
+::selection {
+  background-color: emo-color(stable);
+  color: pal-color(white);
+}
+
+h1 { font-size: heading-size(h1); }
+
+h2 { font-size: heading-size(h2); }
+
+h3 { font-size: heading-size(h3); }
+
+h4 { font-size: heading-size(h4); }
+
+h5 { font-size: heading-size(h5); }
+
+p { margin: 0 0 $content-spacing; }
+
+a {
+  color: $anchor-color;
+  text-decoration: $anchor-decoration;
+
+  &:focus,
+  &:hover {
+    color: $anchor-hover-color;
+    text-decoration: $anchor-hover-decoration;
+  }
+}
+
+section.help {
+    border: 1px solid darken(emo-color(stable), 10%);
+    color: darken(emo-color(stable), 30%);
+    float: left;
+    padding: $content-spacing;
+    margin-top: $content-spacing*4;
+    min-width: 50%;
+}

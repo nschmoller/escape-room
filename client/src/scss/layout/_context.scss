@@ -1,0 +1,10 @@
+.context {
+  &--content {
+    @include heading {
+      margin-top: 1em;
+      margin-bottom: .5em;
+    }
+
+    p { margin: 1em 0; }
+  }
+}

@@ -1,0 +1,55 @@
+@mixin heading ($from: 1, $to: 6) {
+  $heading: '';
+  @for $i from $from through $to {
+    $heading: append(append($heading, h#{$i}),',');
+  }
+
+  #{$heading} {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media(min-width: $screen-lg-min) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media(min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media(min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    @content;
+  }
+}
+
+@mixin xs {
+  @media(max-width: $screen-xs-max) {
+    @content;
+  }
+}
+
+@mixin respond-from($from) {
+  @media(min-width: $from) {
+    @content;
+  }
+}
+
+
+@mixin respond-to($to) {
+  @media(max-width: $to) {
+    @content;
+  }
+}
+
+@mixin svg-bg($name, $value, $bg-size: false) {
+  background: image-url("#{$name}.png") $value;
+  background: none, image-url("#{$name}.svg") $value;
+  @if $bg-size {
+    background-size: $bg-size;
+  }
+}

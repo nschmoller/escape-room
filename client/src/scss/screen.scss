@@ -1,0 +1,27 @@
+// Mange source order, from low to high specificity and far-reaching to very localised
+// Documentation: https://speakerdeck.com/dafed/managing-css-projects-with-itcss
+
+@import
+
+// Settings
+'helper/function',
+'base/config',
+
+// Tools
+'helper/mixin',
+'helper/helper',
+
+// Base
+'base/base',
+
+// Component (A > Z)
+//'component/button',
+//'component/dropdown',
+//'component/form',
+//'component/header',
+
+// Master layout
+'layout/master',
+
+// Page layout
+'layout/page';

@@ -1,0 +1,129 @@
+$map-color-palette: (
+  black: (base: #000),
+  white: (base: #fff),
+  gray: (
+    base:                   '',
+    light:                  '',
+    lighter:                '',
+    lightest:               '',
+    dark:                   '',
+    darker:                 '',
+    darkest:                ''
+  ),
+  red: (
+    base:                   '',
+    light:                  '',
+    dark:                   ''
+  )
+);
+
+$map-color-emotional: (
+  light:                    '',
+  stable:                   #72c9e5,
+  positive:                 #2a0,
+  calm:                     '',
+  balanced:                 '',
+  energized:                '',
+  assertive:                #a20,
+  royal:                    '',
+  dark:                     ''
+);
+
+$map-color-social: (
+  twitter:                  #00aced,
+  facebook:                 #3b5998,
+  whatsapp:                 #4dc247
+);
+
+
+
+// Font size:
+
+$map-font-size: (
+  tiny:                     12px,
+  small:                    14px,
+  base:                     16px,
+  medium:                   18px,
+  large:                    21px,
+  xlarge:                   24px,
+  xxlarge:                  36px,
+  huge:                     48px
+);
+
+
+
+// Font weight
+
+$map-font-weight: (
+  lightest:                 100,
+  lighter:                  200,
+  light:                    300,
+  normal:                   400,
+  bold:                     500,
+  bolder:                   700,
+  boldest:                  900
+);
+
+
+
+// Typography
+
+$font-family:               'Helvetica';
+$font-color:                '';
+$line-height:               '';
+
+$anchor-color:              '';
+$anchor-decoration:         '';
+$anchor-hover-color:        '';
+$anchor-hover-decoration:   '';
+
+$paragraph-whitespace:      $line-height + em;
+
+
+
+// Heading size
+
+$map-heading-size: (
+  h1:                       font-size(xxlarge),
+  h2:                       font-size(xlarge),
+  h3:                       font-size(large),
+  h4:                       font-size(medium),
+  h5:                       font-size(base)
+);
+
+$heading-color:             pal-color(red);
+$heading-weight:            font-weight(bold);
+$heading-font:            'Oswald';
+
+// Spacing
+
+$map-spacing: (
+  tiny:                     10px,
+  small:                    20px,
+  base:                     30px,
+  medium:                   40px,
+  large:                    50px
+);
+
+
+
+// Media queries breakpoints
+// If your're not using bootstrapconfigure you're owh variables (delete this line)
+
+// $screen-xs-max:       '';
+// $screen-sm-min:       '';
+// $screen-sm-max:       '';
+// $screen-md-min:       '';
+// $screen-md-max:       '';
+// $screen-lg-min:       '';
+
+
+
+// Application
+
+$hex-body-bg:               #111;
+$content-spacing:           20px;
+$border-radius:             3px;
+$transition-duration-slow:  .15s;
+$transition-duration:       .3s;
+$transition-duration-fast:  .5s;
