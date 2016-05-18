@@ -13,3 +13,11 @@ module.exports = angular
 .controller('appController', require('./appController.js'))
 .config(require('./routes.js'))
 
+var client = new Faye.Client('http://localhost:8000/faye');
+var subscription = client.subscribe('/server', function(message) {
+  console.log('message: ', message);
+});
+
+client.subscribe('/button', function(message) {
+  console.log('button pushed');
+});
