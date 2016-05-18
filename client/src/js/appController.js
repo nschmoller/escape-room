@@ -1,11 +1,14 @@
 module.exports = [
-    '$scope',
+    '$rootScope', '$scope',
+    function($rootScope, $scope) {
 
-    ($scope) => {
-        return {
-            
-            check: () => {
+    	$scope.button = 'Not pushed';
 
-            }
-        }
-}];
+    	$scope.$on('server.message', function(event, data)
+    	{
+    		$scope.button = data.state;
+    		$scope.$apply();
+    	});	
+  	
+	}
+];

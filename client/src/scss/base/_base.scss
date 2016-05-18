@@ -4,11 +4,18 @@
     padding: 0;
 }
 
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
 body {
   background-color: $hex-body-bg;
   color: pal-color(white);
   font-family: $font-family;
   font-size: font-size(base);
+  font-weight: 100;
   line-height: $line-height;
 }
 
@@ -47,11 +54,19 @@ a {
   }
 }
 
-section.help {
-    border: 1px solid darken(emo-color(stable), 10%);
-    color: darken(emo-color(stable), 30%);
-    float: left;
-    padding: $content-spacing;
-    margin-top: $content-spacing*4;
-    min-width: 50%;
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  font-size: 400%;
+  text-align: center;
+  position: relative;
+  height: 100vh;
+
+  .title {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+  }
 }
