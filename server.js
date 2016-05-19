@@ -3,7 +3,7 @@ var app = express();
 var fs = require("fs");
 var faye = require('faye');
 var exec = require('child_process').exec;
-var button_state = 0;
+var button_state = 1;
 
 app.use(express.static('client/dist'));
 
@@ -31,7 +31,7 @@ setInterval(() => {
   exec("gpio read 7", (error, stdout, stderr) => {
     if (stdout !== button_state) {
       button_state = stdout;
-      if (button_state !== 0) {
+      if (button_state !== 1) {
         console.log('button pushed');
         bayeux.getClient().publish('/button', {
           state: 'pushed'
