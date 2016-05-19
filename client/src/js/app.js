@@ -13,10 +13,9 @@ module.exports = angular
 .config(require('./routes.js'))
 .run(
 	['$rootScope', 
-	function($rootScope) 
-		{
-
-		var client = new Faye.Client('http://192.168.2.36:8000/faye');
+	function($rootScope) {
+    /*var client = new Faye.Client('http://192.168.2.36:8000/faye');*/
+		var client = new Faye.Client('http://localhost:8000/faye');
 		var subscription = client.subscribe('/server', function(data) 
 		{
 		  $rootScope.$broadcast('server.message', data );
@@ -24,6 +23,7 @@ module.exports = angular
 
 		client.subscribe('/button', function(data) 
 		{
+      console.log('button pushed');
 		  $rootScope.$broadcast('server.message', data );
 		});
 
