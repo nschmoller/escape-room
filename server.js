@@ -29,8 +29,8 @@ setTimeout(() => {
 // send for button
 setInterval(() => {
   exec("gpio read 7", (error, stdout, stderr) => {
-    if (stdout !== button_state) {
-      button_state = stdout;
+    if (parseInt(stdout, 10) !== button_state) {
+      button_state = parseInt(stdout, 10);
       if (button_state !== 1) {
         console.log('button pushed');
         bayeux.getClient().publish('/button', {
