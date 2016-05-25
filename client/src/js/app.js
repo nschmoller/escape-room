@@ -10,6 +10,9 @@ module.exports = angular
     'ui.router'
 ])
 .controller('appController', require('./appController.js'))
+.controller('startController', require('./startController.js'))
+.controller('puzzelController', require('./puzzelController.js'))
+.controller('correctController', require('./correctController.js'))
 .config(require('./routes.js'))
 .run(
 	['$rootScope', 

@@ -69,4 +69,24 @@ main {
     transform: translateY(-50%);
     width: 100%;
   }
+
+  .square {
+    background-color: #0060FF;
+    float: left;
+    height: 50px;
+    margin-left: 10px;
+    margin-top: 14px;
+    width: 50px;
+  }
+
+  .text {
+    float: left;
+    margin-left: 10px;
+    height: 80px;
+    width: 200px;
+  }
+
+  .row {
+    height: 80px;
+  }
 }

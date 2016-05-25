@@ -285,3 +285,25 @@ main .title {
 	width: 100%;
 }
 
+main .square {
+	background-color: #0060ff;
+	height: 50px;
+	margin-top: 14px;
+	width: 50px;
+}
+
+main .square,
+main .text {
+	float: left;
+	margin-left: 10px;
+}
+
+main .text {
+	width: 200px;
+}
+
+main .row,
+main .text {
+	height: 80px;
+}
+
