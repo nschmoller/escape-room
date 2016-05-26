@@ -30,18 +30,21 @@ module.exports = angular
 		{
       console.log('red button pushed');
 		  $rootScope.$broadcast('red_button');
+      $rootScope.$apply();
 		});
 
 		client.subscribe('/door_open', function(data)
 		{
       console.log('door opened');
 		  $rootScope.$broadcast('door_open');
+      $rootScope.$apply();
 		});
 
 		client.subscribe('/door_close', function(data)
 		{
       console.log('door closed');
 		  $rootScope.$broadcast('door_close');
+      $rootScope.$apply();
 		});
 
     $rootScope.green_button = () => {
