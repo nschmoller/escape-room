@@ -58,7 +58,7 @@ setInterval(() => {
 
 // send for red button
 setInterval(() => {
-  exec("gpio read 11", (error, stdout, stderr) => {
+  exec("gpio read 21", (error, stdout, stderr) => {
     const current = parseInt(stdout, 10);
     if (!isNaN(current) && current !== red_button_state) {
       red_button_state = current;
@@ -76,11 +76,11 @@ setInterval(() => {
 
 // send for door
 setInterval(() => {
-  exec("gpio read 35", (error, stdout, stderr) => {
+  exec("gpio read 22", (error, stdout, stderr) => {
     const current = parseInt(stdout, 10);
     if (!isNaN(current) && current !== door_state) {
       door_state = current;
-      if (door_state !== 1) {
+      if (door_state === 1) {
         console.log('door opened');
         bayeux.getClient().publish('/door_open', {
           state: 'open'
