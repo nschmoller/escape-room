@@ -80,7 +80,7 @@ setInterval(() => {
     const current = parseInt(stdout, 10);
     if (!isNaN(current) && current !== door_state) {
       door_state = current;
-      if (door_state !== 1) {
+      if (door_state === 1) {
         console.log('door opened');
         bayeux.getClient().publish('/door_open', {
           state: 'open'
