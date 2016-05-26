@@ -58,7 +58,7 @@ setInterval(() => {
 
 // send for red button
 setInterval(() => {
-  exec("gpio read 11", (error, stdout, stderr) => {
+  exec("gpio read 21", (error, stdout, stderr) => {
     const current = parseInt(stdout, 10);
     if (!isNaN(current) && current !== red_button_state) {
       red_button_state = current;
