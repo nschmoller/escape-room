@@ -335,6 +335,11 @@ main .title {
 	text-transform: uppercase;
 }
 
+main .bold {
+	font-weight: 700;
+	color: #9b917a;
+}
+
 main .square {
 	background-color: #9b917a;
 	height: 50px;
@@ -365,6 +370,11 @@ main .text input {
 	color: #9b917a;
 	border: 0;
 	box-shadow: inset 0 0 0 1px #1e2a31;
+}
+
+main .note {
+	text-transform: none;
+	font-size: 40px;
 }
 
 main .row {

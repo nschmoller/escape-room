@@ -121,6 +121,11 @@ main {
     text-transform: uppercase;
   }
 
+  .bold {
+    font-weight: 700;
+    color: pal-color(gold);
+  }
+
   .square {
     background-color: pal-color(gold);
     float: left;
@@ -149,6 +154,11 @@ main {
       border: 0;
       box-shadow: inset 0 0 0 1px pal-color(blue, dark);
     }
+  }
+
+  .note {
+    text-transform: none;
+    font-size: 40px;
   }
 
   .row {
