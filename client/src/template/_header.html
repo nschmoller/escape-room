@@ -10,9 +10,8 @@
   <button ng-click="green_button()">Green button</button>
   <button ng-click="red_button()">Red button</button>
   <button ng-click="toggle_door()">Toggle door</button>
-  <span ng-if="minutes" class="timer">{{ minutes }}:{{ seconds }}</span>
-  <span ng-if="!minutes" class="timer">
-    10:11
+  <span ng-if="minutes" class="timer">
+    {{ minutes }}:{{ seconds }}
     <div class="clock"></div>
   </span>
 
