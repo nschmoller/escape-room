@@ -1,4 +1,3 @@
-// No logic in here. Just project requires
 require('angular');
 require('angular-ui-router');
 require('angular-sanitize');
@@ -99,13 +98,26 @@ module.exports = angular
       }, 1000);
     }
 
-    var intro_sound = new Audio('/assets/intro.mp3');
-    intro_sound.loop = true;
-    intro_sound.play();
-    setTimeout(() => {
-      intro_sound.pause();
-    }, 5000);
+    $rootScope.startIntro = () => {
+      $rootScope.intro_sound = new Audio('/assets/intro.mp3');
+      $rootScope.intro_sound.loop = true;
+      $rootScope.intro_sound.play();
+    };
 
+    $rootScope.stopIntro = () => {
+      $rootScope.intro_sound.pause();
+    };
+
+    $rootScope.startPlaySound = () => {
+      $rootScope.play_sound = new Audio('/assets/spel.mp3');
+      $rootScope.play_sound.play();
+    };
+
+    $rootScope.stopPlaySound = () => {
+      $rootScope.play_sound.pause();
+    };
+
+    $rootScope.startIntro();
 	}
 ]);
 
