@@ -11,7 +11,7 @@ var door_state = 1;
 app.use("/js", express.static(__dirname + "/client/dist/js"));
 app.use("/img", express.static(__dirname + "/client/dist/img"));
 app.use("/css", express.static(__dirname + "/client/dist/css"));
-app.use("/partials", express.static(__dirname + "/client/dist/partials"));
+app.use("/assets", express.static(__dirname + "/client/assets"));
 app.use("/template", express.static(__dirname + "/client/dist/template"));
 
 // serve index.html for all remaining routes, in order to leave routing up to angular
