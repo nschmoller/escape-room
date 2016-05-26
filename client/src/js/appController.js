@@ -10,6 +10,7 @@ module.exports = [
         $rootScope.startTimer();
         $state.go('start');
       } else {
+        console.log('display notification');
         $scope.notification = "Sluit eerst de deur";
       }
     });
