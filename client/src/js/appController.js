@@ -2,15 +2,18 @@ module.exports = [
   '$rootScope', '$scope', '$state',
   function($rootScope, $scope, $state) {
 
-    $scope.button_text = 'Not pushed';
-
-    $scope.$on('server.message', function(event, data)
+    $scope.$on('green_button', function(event, data)
     {
-      $state.go('start');
+      if (!$rootScope.door_open) {
+        $rootScope.startTimer();
+        $state.go('start');
+      } else {
+        $scope.notification = "Sluit eerst de deur";
+      }
     });
 
-    $scope.push_button = () => {
-      $rootScope.$broadcast('server.message', { state: 'pushed' });
-    };
+    $scope.$on('door_close', () => {
+      $scope.notification = "";
+    });
 	}
 ];

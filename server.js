@@ -3,7 +3,9 @@ var app = express();
 var fs = require("fs");
 var faye = require('faye');
 var exec = require('child_process').exec;
-var button_state = 1;
+var green_button_state = 1;
+var red_button_state = 1;
+var door_state = 1;
 
 // serve all asset files from necessary directories
 app.use("/js", express.static(__dirname + "/client/dist/js"));
@@ -36,19 +38,58 @@ setTimeout(() => {
   });
 }, 5000);
 
-// send for button
+// send for green button
 setInterval(() => {
   exec("gpio read 7", (error, stdout, stderr) => {
     const current = parseInt(stdout, 10);
-    if (!isNaN(current) && current !== button_state) {
-      button_state = current;
-      if (button_state !== 1) {
-        console.log('button pushed');
-        bayeux.getClient().publish('/button', {
+    if (!isNaN(current) && current !== green_button_state) {
+      green_button_state = current;
+      if (green_button_state !== 1) {
+        console.log('green button pushed');
+        bayeux.getClient().publish('/green_button', {
           state: 'pushed'
         });
       } else {
         // don't do anything on button release
+      }
+    }
+  });
+}, 50);
+
+// send for red button
+setInterval(() => {
+  exec("gpio read 11", (error, stdout, stderr) => {
+    const current = parseInt(stdout, 10);
+    if (!isNaN(current) && current !== red_button_state) {
+      red_button_state = current;
+      if (red_button_state !== 1) {
+        console.log('red button pushed');
+        bayeux.getClient().publish('/red_button', {
+          state: 'pushed'
+        });
+      } else {
+        // don't do anything on button release
+      }
+    }
+  });
+}, 50);
+
+// send for door
+setInterval(() => {
+  exec("gpio read 35", (error, stdout, stderr) => {
+    const current = parseInt(stdout, 10);
+    if (!isNaN(current) && current !== door_state) {
+      door_state = current;
+      if (door_state !== 1) {
+        console.log('door opened');
+        bayeux.getClient().publish('/door_open', {
+          state: 'open'
+        });
+      } else {
+        console.log('door closed');
+        bayeux.getClient().publish('/door_close', {
+          state: 'closed'
+        });
       }
     }
   });
