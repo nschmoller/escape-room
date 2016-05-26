@@ -36,6 +36,7 @@ module.exports = angular
 		client.subscribe('/door_open', function(data)
 		{
       console.log('door opened');
+      $rootScope.door_open = true;
 		  $rootScope.$broadcast('door_open');
       $rootScope.$apply();
 		});
@@ -43,6 +44,7 @@ module.exports = angular
 		client.subscribe('/door_close', function(data)
 		{
       console.log('door closed');
+      $rootScope.door_open = false;
 		  $rootScope.$broadcast('door_close');
       $rootScope.$apply();
 		});
