@@ -23,6 +23,7 @@ module.exports = angular
 		{
       console.log('green button pushed');
 		  $rootScope.$broadcast('green_button');
+      $scope.apply();
 		});
 
 		client.subscribe('/red_button', function(data)
