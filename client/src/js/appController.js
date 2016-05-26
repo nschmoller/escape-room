@@ -4,6 +4,7 @@ module.exports = [
 
     $scope.$on('green_button', function(event, data)
     {
+      console.log('green button handler');
       if (!$rootScope.door_open) {
         $rootScope.startTimer();
         $state.go('start');
