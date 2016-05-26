@@ -76,7 +76,7 @@ setInterval(() => {
 
 // send for door
 setInterval(() => {
-  exec("gpio read 35", (error, stdout, stderr) => {
+  exec("gpio read 22", (error, stdout, stderr) => {
     const current = parseInt(stdout, 10);
     if (!isNaN(current) && current !== door_state) {
       door_state = current;
