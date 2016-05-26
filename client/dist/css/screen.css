@@ -206,12 +206,24 @@ html {
 }
 
 body {
-	background-color: #111;
-	color: #fff;
-	font-family: Helvetica Neue;
+	background-color: #fff;
+	color: #1e2a31;
+	font-family: Roboto;
 	font-size: 16px;
 	font-weight: 100;
 	line-height: "";
+}
+
+body:before {
+	display: block;
+	position: absolute;
+	top: -14vw;
+	left: -10vw;
+	width: 60vw;
+	height: 60vw;
+	border-radius: 50%;
+	box-shadow: inset 0 0 0 5vw rgba(30,42,49,.1);
+	content: '';
 }
 
 h1,
@@ -221,7 +233,7 @@ h4,
 h5,
 h6 {
 	margin: 0 0 .5em;
-	color: "";
+	color: red;
 	font-weight: 500;
 	font-family: Oswald;
 }
@@ -268,12 +280,49 @@ a:hover {
 }
 
 main {
-	max-width: 1000px;
-	margin: 0 auto;
 	font-size: 400%;
 	text-align: center;
+}
+
+main .container {
 	position: relative;
+	max-width: 1000px;
 	height: 100vh;
+	margin: -75px auto 0;
+}
+
+main .header {
+	position: relative;
+	z-index: 1;
+}
+
+main .notification {
+	position: absolute;
+	width: 100%;
+	color: red;
+}
+
+main .application_logo {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 80px;
+	height: 80px;
+	padding: 10px;
+	background: #1e2a31;
+}
+
+main .application_logo svg {
+	max-height: 100%;
+}
+
+main .application_logo path {
+	fill: #9b917a;
+}
+
+main .content {
+	padding-top: 100px;
 }
 
 main .title {
@@ -283,10 +332,11 @@ main .title {
 	-webkit-transform: translateY(-50%);
 	transform: translateY(-50%);
 	width: 100%;
+	text-transform: uppercase;
 }
 
 main .square {
-	background-color: #0060ff;
+	background-color: #9b917a;
 	height: 50px;
 	margin-top: 14px;
 	width: 50px;

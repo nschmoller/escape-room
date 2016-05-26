@@ -10,8 +10,15 @@ $map-color-palette: (
     darker:                 '',
     darkest:                ''
   ),
-  red: (
+  blue: (
     base:                   '',
+    dark:                   #1e2a31
+  ),
+  gold: (
+    base:                   #9b917a
+  ),
+  red: (
+    base:                   #ff0000,
     light:                  '',
     dark:                   ''
   )
@@ -68,7 +75,7 @@ $map-font-weight: (
 
 // Typography
 
-$font-family:               'Helvetica Neue';
+$font-family:               'Roboto';
 $font-color:                '';
 $line-height:               '';
 
@@ -121,7 +128,7 @@ $map-spacing: (
 
 // Application
 
-$hex-body-bg:               #111;
+$hex-body-bg:               #fff;
 $content-spacing:           20px;
 $border-radius:             3px;
 $transition-duration-slow:  .15s;
