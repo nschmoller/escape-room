@@ -33,6 +33,9 @@ module.exports = [
         setTimeout(() => {
           $scope.notification = $scope.tips[$scope.tip];
           $scope.tip = $scope.tip + 1;
+          if ($scope.tip === 8) {
+            $scope.tip = 0;
+          }
         }, 3000);
       }
     });

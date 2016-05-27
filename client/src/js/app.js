@@ -76,7 +76,18 @@ module.exports = angular
       $rootScope.play_sound.currentTime = 595;
     };
 
+    $rootScope.number_red = 0;
+
     $rootScope.$on('red_button', (event, data) => {
+      if ($rootScope.number_red === 0 && !($state.is('correct') || $state.is('helaas'))) {
+        $rootScope.number_red = 1;
+        $rootScope.notification = "Druk op de rode knop om te stoppen.";
+        setTimeout(() => {
+          $rootScope.number_red = 0;
+          $rootScope.notification = "";
+        }, 3000);
+        return;
+      }
       $state.go('home');
       $rootScope.stopTimer();
       $rootScope.stopAlarm();
