@@ -73,7 +73,7 @@ module.exports = angular
 
     $rootScope.skip_timer = () => {
       $rootScope.timer = 5;
-      $rootScope.play_sound.currentTime = 295;
+      $rootScope.play_sound.currentTime = 595;
     };
 
     $rootScope.$on('red_button', (event, data) => {
@@ -113,7 +113,7 @@ module.exports = angular
     }
 
     $rootScope.startTimer = () => {
-      $rootScope.timer = 300;
+      $rootScope.timer = 600;
       $rootScope.minutes = zeroPad(window.Math.floor($rootScope.timer / 60));
       $rootScope.seconds = zeroPad($rootScope.timer % 60);
       $rootScope.interval = $interval(() => {
@@ -147,7 +147,7 @@ module.exports = angular
     };
 
     $rootScope.startPlaySound = () => {
-      $rootScope.play_sound = new Audio('/assets/spel.mp3');
+      $rootScope.play_sound = new Audio('/assets/spel_lang.mp3');
       $rootScope.play_sound.play();
     };
 
