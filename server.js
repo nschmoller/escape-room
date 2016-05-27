@@ -54,7 +54,7 @@ setInterval(() => {
       }
     }
   });
-}, 50);
+}, 20);
 
 // send for red button
 setInterval(() => {
