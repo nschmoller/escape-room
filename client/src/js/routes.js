@@ -37,5 +37,10 @@ module.exports = [
         templateUrl: 'template/correct.html',
         controller: 'correctController',
       })
+      .state('helaas', {
+        url: '/helaas',
+        templateUrl: 'template/helaas.html',
+        controller: 'helaasController',
+      })
   }
 ];
