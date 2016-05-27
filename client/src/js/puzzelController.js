@@ -1,9 +1,7 @@
 module.exports = [
-  '$rootScope', '$scope', '$state', '$interval',
-  function($rootScope, $scope, $state, $interval) {
-    $scope.push_button = () => {
-      $rootScope.$broadcast('server.message', { state: 'pushed' });
-    };
+  '$rootScope', '$scope', '$state', '$interval', '$window',
+  function($rootScope, $scope, $state, $interval, $window) {
+    $window.document.getElementById('answer').focus();
 
     $scope.answer = "";
     $scope.tip = 0;
@@ -14,6 +12,7 @@ module.exports = [
       "Tip 4: Leg de kaarten op alfabetische volgorde",
       "Tip 5: De kaarten vormen samen een som",
       "Tip 6: Vul het antwoord van de som hieronder in",
+      "Tip 7: Bali, violet en wurgslang zijn GEEN programmeertalen",
       "Nu moet je het echt zelf doen. De tips zijn op!"
     ];
 
