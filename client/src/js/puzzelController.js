@@ -7,14 +7,14 @@ module.exports = [
     $scope.tip = 0;
     $scope.tips = [
       "Tip 1: Druk op de groene knop voor meer tips",
-      "Tip 2: Niet alle kaarten zijn programmeertalen",
-      "Tip 3: Vervang de tekens door de cijfers",
-      "Tip 4: De * bij javascript is vermenigvuldigen",
-      "Tip 5: Je hebt in totaal 7 kaarten nodig",
-      "Tip 6: Leg de kaarten op alfabetische volgorde",
-      "Tip 7: De kaarten vormen samen een som",
-      "Tip 8: Vul het antwoord van de som hieronder in",
-      "Tip 9: Bali, violet en wurgslang zijn GEEN programmeertalen",
+      "Tip 2: Schrijf de kaarten op papier, met tekens",
+      "Tip 2: Alle kaarten vormen samen een som",
+      "Tip 3: Niet alle kaarten zijn programmeertalen",
+      "Tip 4: Vervang de tekens door de cijfers",
+      "Tip 5: De * bij javascript is vermenigvuldigen",
+      "Tip 6: Er zijn in totaal 14 kaarten",
+      "Tip 7: Van de 14 kaarten heb je er 11 nodig",
+      "Tip 8: Bali, violet en wurgslang zijn GEEN programmeertalen",
       "Nu moet je het echt zelf doen. De tips zijn op!"
     ];
 
@@ -30,15 +30,12 @@ module.exports = [
           $rootScope.red_button();
         }, 60000);
       } else {
-        $scope.notification = "Jammer, probeer het nog eens...";
         $rootScope.playBuzzer();
-        setTimeout(() => {
-          $scope.notification = $scope.tips[$scope.tip];
-          $scope.tip = $scope.tip + 1;
-          if ($scope.tip === 8) {
-            $scope.tip = 0;
-          }
-        }, 3000);
+        $scope.notification = $scope.tips[$scope.tip];
+        $scope.tip = $scope.tip + 1;
+        if ($scope.tip === 9) {
+          $scope.tip = 0;
+        }
       }
     });
 
