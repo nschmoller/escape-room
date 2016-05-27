@@ -124,7 +124,7 @@ module.exports = angular
     }
 
     $rootScope.startTimer = () => {
-      $rootScope.timer = 600;
+      $rootScope.timer = 900;
       $rootScope.minutes = zeroPad(window.Math.floor($rootScope.timer / 60));
       $rootScope.seconds = zeroPad($rootScope.timer % 60);
       $rootScope.interval = $interval(() => {
@@ -158,13 +158,18 @@ module.exports = angular
     };
 
     $rootScope.startPlaySound = () => {
-      $rootScope.play_sound = new Audio('/assets/spel_lang.mp3');
+      $rootScope.play_sound = new Audio('/assets/spel.mp3');
       $rootScope.play_sound.play();
+      $rootScope.second_playsound = setTimeout(() => {
+        $rootScope.play_sound = new Audio('/assets/spel_lang.mp3');
+        $rootScope.play_sound.play();
+      }, 300000);
     };
 
     $rootScope.stopPlaySound = () => {
       if ($rootScope.play_sound) {
         $rootScope.play_sound.pause();
+        clearTimeout($rootScope.second_playsound);
       }
     };
 
