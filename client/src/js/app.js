@@ -118,11 +118,11 @@ module.exports = angular
       $rootScope.seconds = zeroPad($rootScope.timer % 60);
       $rootScope.interval = $interval(() => {
         $rootScope.timer = $rootScope.timer - 1;
+        $rootScope.minutes = zeroPad(window.Math.floor($rootScope.timer / 60));
+        $rootScope.seconds = zeroPad($rootScope.timer % 60);
         if ($rootScope.timer === 0) {
           $rootScope.$broadcast('time_up');
         }
-        $rootScope.minutes = zeroPad(window.Math.floor($rootScope.timer / 60));
-        $rootScope.seconds = zeroPad($rootScope.timer % 60);
       }, 1000);
     };
 
