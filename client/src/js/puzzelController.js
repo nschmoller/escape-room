@@ -8,11 +8,12 @@ module.exports = [
     $scope.tips = [
       "Tip 1: Niet alle kaarten zijn programmeertalen",
       "Tip 2: Vervang de tekens door de cijfers",
-      "Tip 3: Je hebt in totaal 7 kaarten nodig",
-      "Tip 4: Leg de kaarten op alfabetische volgorde",
-      "Tip 5: De kaarten vormen samen een som",
-      "Tip 6: Vul het antwoord van de som hieronder in",
-      "Tip 7: Bali, violet en wurgslang zijn GEEN programmeertalen",
+      "Tip 3: De * bij javascript is vermenigvuldigen",
+      "Tip 4: Je hebt in totaal 7 kaarten nodig",
+      "Tip 5: Leg de kaarten op alfabetische volgorde",
+      "Tip 6: De kaarten vormen samen een som",
+      "Tip 7: Vul het antwoord van de som hieronder in",
+      "Tip 8: Bali, violet en wurgslang zijn GEEN programmeertalen",
       "Nu moet je het echt zelf doen. De tips zijn op!"
     ];
 
