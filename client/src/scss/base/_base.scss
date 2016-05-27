@@ -74,7 +74,7 @@ main {
   .container {
     position: relative;
     max-width: 1000px;
-    height: 100vh;
+    height: 90vh;
     margin: -77px auto 0;
   }
 
@@ -94,8 +94,8 @@ main {
     position: absolute;
     top: 0;
     left: 0;
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
     padding: 10px;
     background: pal-color(blue, dark);
 
@@ -170,23 +170,23 @@ main {
     right: 0;
     bottom: 0;
     padding: 20px;
-    font-size: 30px;
+    font-size: 60px;
     background: pal-color(blue, dark);
     color: pal-color(white);
 
     .clock {
       display: inline-block;
-      width: 40px;
-      height: 40px;
+      width: 60px;
+      height: 60px;
       margin: -10px 0;
       border-radius: 50%;
-      box-shadow: inset 0 0 0 6px pal-color(gold);
+      box-shadow: inset 0 0 0 9px pal-color(gold);
       animation: rotate 2s infinite linear;
 
       &::before {
         display: block;
-        width: 6px;
-        margin-left: 25px;
+        width: 10px;
+        margin-left: 38px;
         height: 100%;
         background: pal-color(blue, dark);
         content: '';

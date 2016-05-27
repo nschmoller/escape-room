@@ -287,7 +287,7 @@ main {
 main .container {
 	position: relative;
 	max-width: 1000px;
-	height: 100vh;
+	height: 90vh;
 	margin: -77px auto 0;
 }
 
@@ -307,8 +307,8 @@ main .application_logo {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 80px;
-	height: 80px;
+	width: 120px;
+	height: 120px;
 	padding: 10px;
 	background: #1e2a31;
 }
@@ -386,26 +386,26 @@ main .timer {
 	right: 0;
 	bottom: 0;
 	padding: 20px;
-	font-size: 30px;
+	font-size: 60px;
 	background: #1e2a31;
 	color: #fff;
 }
 
 main .timer .clock {
 	display: inline-block;
-	width: 40px;
-	height: 40px;
+	width: 60px;
+	height: 60px;
 	margin: -10px 0;
 	border-radius: 50%;
-	box-shadow: inset 0 0 0 6px #9b917a;
+	box-shadow: inset 0 0 0 9px #9b917a;
 	-webkit-animation: a 2s infinite linear;
 	animation: a 2s infinite linear;
 }
 
 main .timer .clock:before {
 	display: block;
-	width: 6px;
-	margin-left: 25px;
+	width: 10px;
+	margin-left: 38px;
 	height: 100%;
 	background: #1e2a31;
 	content: '';
